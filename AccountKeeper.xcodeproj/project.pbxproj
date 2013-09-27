@@ -25,6 +25,8 @@
 		3BDEA70117F58EE800D15AFA /* Income.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDEA70017F58EE800D15AFA /* Income.m */; };
 		3BDEA70417F58EE800D15AFA /* Accounts.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDEA70317F58EE800D15AFA /* Accounts.m */; };
 		3BDEA70717F58EE800D15AFA /* Expenditure.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDEA70617F58EE800D15AFA /* Expenditure.m */; };
+		3BDEA70A17F58F2900D15AFA /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BDEA70917F58F2900D15AFA /* Storyboard.storyboard */; };
+		3BDEA70D17F591E200D15AFA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDEA70C17F591E200D15AFA /* FirstViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,9 @@
 		3BDEA70317F58EE800D15AFA /* Accounts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Accounts.m; path = model/Accounts.m; sourceTree = "<group>"; };
 		3BDEA70517F58EE800D15AFA /* Expenditure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Expenditure.h; path = model/Expenditure.h; sourceTree = "<group>"; };
 		3BDEA70617F58EE800D15AFA /* Expenditure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Expenditure.m; path = model/Expenditure.m; sourceTree = "<group>"; };
+		3BDEA70917F58F2900D15AFA /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		3BDEA70B17F591E200D15AFA /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = controller/FirstViewController.h; sourceTree = "<group>"; };
+		3BDEA70C17F591E200D15AFA /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = controller/FirstViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,12 +133,10 @@
 				3BDEA6C617F588C100D15AFA /* AppDelegate.m */,
 				3BDEA6CB17F588C100D15AFA /* Images.xcassets */,
 				3BDEA6E917F589B400D15AFA /* AccountKeeper.xcdatamodeld */,
-				3BDEA70517F58EE800D15AFA /* Expenditure.h */,
-				3BDEA70617F58EE800D15AFA /* Expenditure.m */,
-				3BDEA70217F58EE800D15AFA /* Accounts.h */,
-				3BDEA70317F58EE800D15AFA /* Accounts.m */,
-				3BDEA6FF17F58EE800D15AFA /* Income.h */,
-				3BDEA70017F58EE800D15AFA /* Income.m */,
+				3BDEA70917F58F2900D15AFA /* Storyboard.storyboard */,
+				3BDEA70B17F591E200D15AFA /* FirstViewController.h */,
+				3BDEA70C17F591E200D15AFA /* FirstViewController.m */,
+				3BDEA70817F58F1300D15AFA /* model */,
 				3BDEA6BD17F588C100D15AFA /* Supporting Files */,
 			);
 			path = AccountKeeper;
@@ -166,6 +169,19 @@
 				3BDEA6DC17F588C100D15AFA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3BDEA70817F58F1300D15AFA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				3BDEA70517F58EE800D15AFA /* Expenditure.h */,
+				3BDEA70617F58EE800D15AFA /* Expenditure.m */,
+				3BDEA70217F58EE800D15AFA /* Accounts.h */,
+				3BDEA70317F58EE800D15AFA /* Accounts.m */,
+				3BDEA6FF17F58EE800D15AFA /* Income.h */,
+				3BDEA70017F58EE800D15AFA /* Income.m */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +261,7 @@
 			files = (
 				3BDEA6C117F588C100D15AFA /* InfoPlist.strings in Resources */,
 				3BDEA6CC17F588C100D15AFA /* Images.xcassets in Resources */,
+				3BDEA70A17F58F2900D15AFA /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +282,7 @@
 			files = (
 				3BDEA6C717F588C100D15AFA /* AppDelegate.m in Sources */,
 				3BDEA70717F58EE800D15AFA /* Expenditure.m in Sources */,
+				3BDEA70D17F591E200D15AFA /* FirstViewController.m in Sources */,
 				3BDEA6C317F588C100D15AFA /* main.m in Sources */,
 				3BDEA70117F58EE800D15AFA /* Income.m in Sources */,
 				3BDEA6EB17F589B400D15AFA /* AccountKeeper.xcdatamodeld in Sources */,
