@@ -14,7 +14,6 @@
 		3BDEA6C117F588C100D15AFA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BDEA6BF17F588C100D15AFA /* InfoPlist.strings */; };
 		3BDEA6C317F588C100D15AFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDEA6C217F588C100D15AFA /* main.m */; };
 		3BDEA6C717F588C100D15AFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDEA6C617F588C100D15AFA /* AppDelegate.m */; };
-		3BDEA6CA17F588C100D15AFA /* AccountKeeper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3BDEA6C817F588C100D15AFA /* AccountKeeper.xcdatamodeld */; };
 		3BDEA6CC17F588C100D15AFA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BDEA6CB17F588C100D15AFA /* Images.xcassets */; };
 		3BDEA6D317F588C100D15AFA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BDEA6D217F588C100D15AFA /* XCTest.framework */; };
 		3BDEA6D417F588C100D15AFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BDEA6B417F588C100D15AFA /* Foundation.framework */; };
@@ -22,6 +21,10 @@
 		3BDEA6D617F588C100D15AFA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BDEA6BA17F588C100D15AFA /* CoreData.framework */; };
 		3BDEA6DE17F588C100D15AFA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BDEA6DC17F588C100D15AFA /* InfoPlist.strings */; };
 		3BDEA6E017F588C100D15AFA /* AccountKeeperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDEA6DF17F588C100D15AFA /* AccountKeeperTests.m */; };
+		3BDEA6EB17F589B400D15AFA /* AccountKeeper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3BDEA6E917F589B400D15AFA /* AccountKeeper.xcdatamodeld */; };
+		3BDEA70117F58EE800D15AFA /* Income.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDEA70017F58EE800D15AFA /* Income.m */; };
+		3BDEA70417F58EE800D15AFA /* Accounts.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDEA70317F58EE800D15AFA /* Accounts.m */; };
+		3BDEA70717F58EE800D15AFA /* Expenditure.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDEA70617F58EE800D15AFA /* Expenditure.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,13 +49,19 @@
 		3BDEA6C417F588C100D15AFA /* AccountKeeper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AccountKeeper-Prefix.pch"; sourceTree = "<group>"; };
 		3BDEA6C517F588C100D15AFA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3BDEA6C617F588C100D15AFA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3BDEA6C917F588C100D15AFA /* AccountKeeper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AccountKeeper.xcdatamodel; sourceTree = "<group>"; };
 		3BDEA6CB17F588C100D15AFA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3BDEA6D117F588C100D15AFA /* AccountKeeperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccountKeeperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BDEA6D217F588C100D15AFA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3BDEA6DB17F588C100D15AFA /* AccountKeeperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AccountKeeperTests-Info.plist"; sourceTree = "<group>"; };
 		3BDEA6DD17F588C100D15AFA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3BDEA6DF17F588C100D15AFA /* AccountKeeperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountKeeperTests.m; sourceTree = "<group>"; };
+		3BDEA6EA17F589B400D15AFA /* AccountKeeper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AccountKeeper.xcdatamodel; sourceTree = "<group>"; };
+		3BDEA6FF17F58EE800D15AFA /* Income.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Income.h; path = model/Income.h; sourceTree = "<group>"; };
+		3BDEA70017F58EE800D15AFA /* Income.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Income.m; path = model/Income.m; sourceTree = "<group>"; };
+		3BDEA70217F58EE800D15AFA /* Accounts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Accounts.h; path = model/Accounts.h; sourceTree = "<group>"; };
+		3BDEA70317F58EE800D15AFA /* Accounts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Accounts.m; path = model/Accounts.m; sourceTree = "<group>"; };
+		3BDEA70517F58EE800D15AFA /* Expenditure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Expenditure.h; path = model/Expenditure.h; sourceTree = "<group>"; };
+		3BDEA70617F58EE800D15AFA /* Expenditure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Expenditure.m; path = model/Expenditure.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +127,13 @@
 				3BDEA6C517F588C100D15AFA /* AppDelegate.h */,
 				3BDEA6C617F588C100D15AFA /* AppDelegate.m */,
 				3BDEA6CB17F588C100D15AFA /* Images.xcassets */,
-				3BDEA6C817F588C100D15AFA /* AccountKeeper.xcdatamodeld */,
+				3BDEA6E917F589B400D15AFA /* AccountKeeper.xcdatamodeld */,
+				3BDEA70517F58EE800D15AFA /* Expenditure.h */,
+				3BDEA70617F58EE800D15AFA /* Expenditure.m */,
+				3BDEA70217F58EE800D15AFA /* Accounts.h */,
+				3BDEA70317F58EE800D15AFA /* Accounts.m */,
+				3BDEA6FF17F58EE800D15AFA /* Income.h */,
+				3BDEA70017F58EE800D15AFA /* Income.m */,
 				3BDEA6BD17F588C100D15AFA /* Supporting Files */,
 			);
 			path = AccountKeeper;
@@ -249,8 +264,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BDEA6C717F588C100D15AFA /* AppDelegate.m in Sources */,
+				3BDEA70717F58EE800D15AFA /* Expenditure.m in Sources */,
 				3BDEA6C317F588C100D15AFA /* main.m in Sources */,
-				3BDEA6CA17F588C100D15AFA /* AccountKeeper.xcdatamodeld in Sources */,
+				3BDEA70117F58EE800D15AFA /* Income.m in Sources */,
+				3BDEA6EB17F589B400D15AFA /* AccountKeeper.xcdatamodeld in Sources */,
+				3BDEA70417F58EE800D15AFA /* Accounts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,12 +481,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		3BDEA6C817F588C100D15AFA /* AccountKeeper.xcdatamodeld */ = {
+		3BDEA6E917F589B400D15AFA /* AccountKeeper.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				3BDEA6C917F588C100D15AFA /* AccountKeeper.xcdatamodel */,
+				3BDEA6EA17F589B400D15AFA /* AccountKeeper.xcdatamodel */,
 			);
-			currentVersion = 3BDEA6C917F588C100D15AFA /* AccountKeeper.xcdatamodel */;
+			currentVersion = 3BDEA6EA17F589B400D15AFA /* AccountKeeper.xcdatamodel */;
 			path = AccountKeeper.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
