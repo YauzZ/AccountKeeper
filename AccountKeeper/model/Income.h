@@ -2,7 +2,7 @@
 //  Income.h
 //  AccountKeeper
 //
-//  Created by Colin Yang Hong on 13-9-27.
+//  Created by Colin Yang Hong on 13-9-29.
 //  Copyright (c) 2013年 Yang Hong. All rights reserved.
 //
 
@@ -13,9 +13,9 @@
 
 @interface Income : NSManagedObject
 
-@property (nonatomic, retain) NSString * date;
 @property (nonatomic, retain) NSNumber * amount;
 @property (nonatomic, retain) NSString * annotations;
+@property (nonatomic, retain) NSDate * date;
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) Accounts *toAccount;
 
