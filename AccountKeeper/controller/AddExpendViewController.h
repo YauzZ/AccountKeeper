@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Expenditure.h"
 
 @interface AddExpendViewController : UIViewController
+
+@property (strong, nonatomic) Expenditure *expend;
 
 @end

@@ -8,7 +8,6 @@
 
 #import "AddExpendViewController.h"
 #import "AppDelegate.h"
-#import "Expenditure.h"
 
 @interface AddExpendViewController ()
 
@@ -40,6 +39,20 @@
     self.myDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    if (_expend != nil) {
+        _amount.text = [_expend.amount description];
+        _currentDate.date = _expend.date;
+        _category.text = _expend.category;
+    }
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    self.expend = nil;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -48,26 +61,17 @@
 
 - (IBAction)save:(id)sender
 {
-    [self saveExpend];
+    if (_expend == nil) {
+        self.expend = (Expenditure *)[NSEntityDescription insertNewObjectForEntityForName:@"Expenditure" inManagedObjectContext:_myDelegate.managedObjectContext];
+    }
+    
+    _expend.amount = [NSNumber numberWithDouble:[_amount.text doubleValue]];
+    _expend.category = _category.text;
+    _expend.date = _currentDate.date;
+    
+    [Expenditure saveExpend:_expend inManagedObjectContext:self.myDelegate.managedObjectContext];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)saveExpend
-{
-    Expenditure *expend = (Expenditure *)[NSEntityDescription insertNewObjectForEntityForName:@"Expenditure" inManagedObjectContext:self.myDelegate.managedObjectContext];
-    expend.amount = [NSNumber numberWithDouble:[_amount.text doubleValue]];
-    expend.category = _category.text;
-    expend.date = [_currentDate date];
-    
-    NSError *error;
-    
-    //托管对象准备好后，调用托管对象上下文的save方法将数据写入数据库
-    BOOL isSaveSuccess = [self.myDelegate.managedObjectContext save:&error];
-    
-    if (!isSaveSuccess) {
-        NSLog(@"Error: %@,%@",error,[error userInfo]);
-    }else {
-        NSLog(@"Save successful!");
-    }
-}
+
 @end
