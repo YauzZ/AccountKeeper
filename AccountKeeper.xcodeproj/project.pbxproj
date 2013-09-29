@@ -32,6 +32,7 @@
 		3BEDF58317F811EF00EB1346 /* IncomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEDF58217F811EF00EB1346 /* IncomeViewController.m */; };
 		3BEDF58617F8123700EB1346 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEDF58517F8123700EB1346 /* CoreDataManager.m */; };
 		3BEDF58917F8224B00EB1346 /* AddIncomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEDF58817F8224B00EB1346 /* AddIncomeViewController.m */; };
+		3BEDF59317F8317200EB1346 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEDF59217F8317200EB1346 /* AccountViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		3BEDF58517F8123700EB1346 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		3BEDF58717F8224B00EB1346 /* AddIncomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddIncomeViewController.h; path = controller/AddIncomeViewController.h; sourceTree = "<group>"; };
 		3BEDF58817F8224B00EB1346 /* AddIncomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddIncomeViewController.m; path = controller/AddIncomeViewController.m; sourceTree = "<group>"; };
+		3BEDF59117F8317200EB1346 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountViewController.h; path = controller/AccountViewController.h; sourceTree = "<group>"; };
+		3BEDF59217F8317200EB1346 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountViewController.m; path = controller/AccountViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,10 +156,9 @@
 				3BDEA70917F58F2900D15AFA /* Storyboard.storyboard */,
 				3BDEA70B17F591E200D15AFA /* FirstViewController.h */,
 				3BDEA70C17F591E200D15AFA /* FirstViewController.m */,
-				3BEDF58117F811EF00EB1346 /* IncomeViewController.h */,
-				3BEDF58217F811EF00EB1346 /* IncomeViewController.m */,
-				3BEDF58717F8224B00EB1346 /* AddIncomeViewController.h */,
-				3BEDF58817F8224B00EB1346 /* AddIncomeViewController.m */,
+				3BEDF59117F8317200EB1346 /* AccountViewController.h */,
+				3BEDF59217F8317200EB1346 /* AccountViewController.m */,
+				3BEDF59017F8315500EB1346 /* Income */,
 				3BEDF58017F811D200EB1346 /* Expenditure */,
 				3BDEA70817F58F1300D15AFA /* model */,
 				3BDEA6BD17F588C100D15AFA /* Supporting Files */,
@@ -215,6 +217,17 @@
 				3BB8176017F7E12C00326EAE /* AddExpendViewController.m */,
 			);
 			name = Expenditure;
+			sourceTree = "<group>";
+		};
+		3BEDF59017F8315500EB1346 /* Income */ = {
+			isa = PBXGroup;
+			children = (
+				3BEDF58117F811EF00EB1346 /* IncomeViewController.h */,
+				3BEDF58217F811EF00EB1346 /* IncomeViewController.m */,
+				3BEDF58717F8224B00EB1346 /* AddIncomeViewController.h */,
+				3BEDF58817F8224B00EB1346 /* AddIncomeViewController.m */,
+			);
+			name = Income;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,6 +338,7 @@
 				3BDEA70417F58EE800D15AFA /* Accounts.m in Sources */,
 				3BEDF58317F811EF00EB1346 /* IncomeViewController.m in Sources */,
 				3BEDF58917F8224B00EB1346 /* AddIncomeViewController.m in Sources */,
+				3BEDF59317F8317200EB1346 /* AccountViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

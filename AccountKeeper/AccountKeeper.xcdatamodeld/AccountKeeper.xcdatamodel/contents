@@ -21,8 +21,8 @@
         <relationship name="toAccount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Account" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Expenditure" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Income" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Account" positionX="241" positionY="-0" width="128" height="88"/>
+        <element name="Expenditure" positionX="421" positionY="137" width="128" height="88"/>
+        <element name="Income" positionX="-27" positionY="135" width="128" height="88"/>
     </elements>
 </model>
