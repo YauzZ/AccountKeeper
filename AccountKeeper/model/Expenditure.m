@@ -19,4 +19,9 @@
 @dynamic annotations;
 @dynamic fromAccount;
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"expend %0.2f by %@ at %@",[self.amount doubleValue],self.category,self.date];
+}
+
 @end
