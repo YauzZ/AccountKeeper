@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BB8175E17F7D1C800326EAE /* ExpenditureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB8175D17F7D1C800326EAE /* ExpenditureViewController.m */; };
 		3BDEA6B517F588C100D15AFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BDEA6B417F588C100D15AFA /* Foundation.framework */; };
 		3BDEA6B717F588C100D15AFA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BDEA6B617F588C100D15AFA /* CoreGraphics.framework */; };
 		3BDEA6B917F588C100D15AFA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BDEA6B817F588C100D15AFA /* UIKit.framework */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3BB8175C17F7D1C800326EAE /* ExpenditureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenditureViewController.h; sourceTree = "<group>"; };
+		3BB8175D17F7D1C800326EAE /* ExpenditureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenditureViewController.m; sourceTree = "<group>"; };
 		3BDEA6B117F588C100D15AFA /* AccountKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BDEA6B417F588C100D15AFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3BDEA6B617F588C100D15AFA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -136,6 +139,8 @@
 				3BDEA70917F58F2900D15AFA /* Storyboard.storyboard */,
 				3BDEA70B17F591E200D15AFA /* FirstViewController.h */,
 				3BDEA70C17F591E200D15AFA /* FirstViewController.m */,
+				3BB8175C17F7D1C800326EAE /* ExpenditureViewController.h */,
+				3BB8175D17F7D1C800326EAE /* ExpenditureViewController.m */,
 				3BDEA70817F58F1300D15AFA /* model */,
 				3BDEA6BD17F588C100D15AFA /* Supporting Files */,
 			);
@@ -282,6 +287,7 @@
 			files = (
 				3BDEA6C717F588C100D15AFA /* AppDelegate.m in Sources */,
 				3BDEA70717F58EE800D15AFA /* Expenditure.m in Sources */,
+				3BB8175E17F7D1C800326EAE /* ExpenditureViewController.m in Sources */,
 				3BDEA70D17F591E200D15AFA /* FirstViewController.m in Sources */,
 				3BDEA6C317F588C100D15AFA /* main.m in Sources */,
 				3BDEA70117F58EE800D15AFA /* Income.m in Sources */,
@@ -487,6 +493,7 @@
 				3BDEA6E517F588C100D15AFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3BDEA6E617F588C100D15AFA /* Build configuration list for PBXNativeTarget "AccountKeeperTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +502,7 @@
 				3BDEA6E817F588C100D15AFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
