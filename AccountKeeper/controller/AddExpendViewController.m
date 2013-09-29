@@ -14,6 +14,7 @@
 
 @property (strong) AppDelegate *myDelegate;
 
+- (IBAction)tapBlankView:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *amount;
 @property (weak, nonatomic) IBOutlet UIDatePicker *currentDate;
 @property (weak, nonatomic) IBOutlet UITextField *category;
@@ -77,4 +78,9 @@
 }
 
 
+- (IBAction)tapBlankView:(id)sender
+{
+    [_category resignFirstResponder];
+    [_amount resignFirstResponder];
+}
 @end

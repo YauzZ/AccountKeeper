@@ -501,6 +501,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="vp1-Cf-ZUr" appends="YES" id="QYR-un-bfS"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="新增支出" id="JTN-Ly-C6T">
                         <barButtonItem key="rightBarButtonItem" title="保存" id="vC1-tS-QCn">
@@ -517,6 +521,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S5D-GO-OAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="vp1-Cf-ZUr">
+                    <connections>
+                        <action selector="tapBlankView:" destination="nK5-XT-pAo" id="Lqz-6P-C9e"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1140" y="-617"/>
         </scene>
