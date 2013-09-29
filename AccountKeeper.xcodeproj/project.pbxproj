@@ -33,6 +33,7 @@
 		3BEDF58617F8123700EB1346 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEDF58517F8123700EB1346 /* CoreDataManager.m */; };
 		3BEDF58917F8224B00EB1346 /* AddIncomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEDF58817F8224B00EB1346 /* AddIncomeViewController.m */; };
 		3BEDF59317F8317200EB1346 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEDF59217F8317200EB1346 /* AccountViewController.m */; };
+		3BEDF59C17F834B800EB1346 /* AddAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEDF59B17F834B800EB1346 /* AddAccountViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		3BEDF58817F8224B00EB1346 /* AddIncomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddIncomeViewController.m; path = controller/AddIncomeViewController.m; sourceTree = "<group>"; };
 		3BEDF59117F8317200EB1346 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountViewController.h; path = controller/AccountViewController.h; sourceTree = "<group>"; };
 		3BEDF59217F8317200EB1346 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountViewController.m; path = controller/AccountViewController.m; sourceTree = "<group>"; };
+		3BEDF59A17F834B800EB1346 /* AddAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddAccountViewController.h; path = controller/AddAccountViewController.h; sourceTree = "<group>"; };
+		3BEDF59B17F834B800EB1346 /* AddAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddAccountViewController.m; path = controller/AddAccountViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,8 @@
 				3BDEA70C17F591E200D15AFA /* FirstViewController.m */,
 				3BEDF59117F8317200EB1346 /* AccountViewController.h */,
 				3BEDF59217F8317200EB1346 /* AccountViewController.m */,
+				3BEDF59A17F834B800EB1346 /* AddAccountViewController.h */,
+				3BEDF59B17F834B800EB1346 /* AddAccountViewController.m */,
 				3BEDF59017F8315500EB1346 /* Income */,
 				3BEDF58017F811D200EB1346 /* Expenditure */,
 				3BDEA70817F58F1300D15AFA /* model */,
@@ -334,6 +339,7 @@
 				3BEDF58617F8123700EB1346 /* CoreDataManager.m in Sources */,
 				3BDEA6C317F588C100D15AFA /* main.m in Sources */,
 				3BDEA70117F58EE800D15AFA /* Income.m in Sources */,
+				3BEDF59C17F834B800EB1346 /* AddAccountViewController.m in Sources */,
 				3BDEA6EB17F589B400D15AFA /* AccountKeeper.xcdatamodeld in Sources */,
 				3BDEA70417F58EE800D15AFA /* Accounts.m in Sources */,
 				3BEDF58317F811EF00EB1346 /* IncomeViewController.m in Sources */,
