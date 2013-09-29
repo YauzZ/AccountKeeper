@@ -9,10 +9,12 @@
 #import "IncomeViewController.h"
 #import "CoreDataManager.h"
 #import "Income.h"
+#import "AddIncomeViewController.h"
 
 @interface IncomeViewController ()
 
 @property (strong, nonatomic) NSMutableArray *objects;
+@property (assign) int selectedIndex;
 @end
 
 @implementation IncomeViewController
@@ -47,6 +49,7 @@
 {
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
     self.objects = [[CoreDataManager defaultInstance] fetchDataWithEntity:@"Income" bySortDescriptors:@[sortDescriptor]];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -65,38 +68,45 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"IncomeCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     Income *aIncome = [_objects objectAtIndex:indexPath.row];
     cell.textLabel.text = aIncome.title;
     cell.detailTextLabel.text = [aIncome.amount description];
-    // Configure the cell...
     
     return cell;
 }
 
-/*
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    _selectedIndex = indexPath.row;
+    return indexPath;
+}
+
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        CoreDataManager *cdManager = [CoreDataManager defaultInstance];
+        [cdManager deleteEntity:[_objects objectAtIndex:indexPath.row]];
+        [_objects removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
 /*
 // Override to support rearranging the table view.
@@ -121,6 +131,11 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"SelectRow"]) {
+        AddIncomeViewController *viewController = segue.destinationViewController;
+        NSLog(@"Selected Index.row is %d",_selectedIndex);
+        viewController.income = [_objects objectAtIndex:_selectedIndex];
+    }
 }
 
 

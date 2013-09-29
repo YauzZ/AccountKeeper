@@ -17,6 +17,7 @@
 - (void)deleteEntity:(id)entry;
 - (NSMutableArray *)fetchDataWithEntity:(NSString *)entityName bySortDescriptors:(NSArray *)sortDescriptors;
 
+- (NSEntityDescription *)getEntityWithName:(NSString *)name;
 + (id)defaultInstance;
 
 @end

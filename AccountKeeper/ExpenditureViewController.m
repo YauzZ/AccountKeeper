@@ -30,16 +30,6 @@
     [super viewDidLoad];
     self.myDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 
-    
-// 测试数据
-//    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Expenditure" inManagedObjectContext:[self.myDelegate managedObjectContext]];
-//    for (int i = 0; i < 10; i++) {
-//        Expenditure *test = [[Expenditure alloc] initWithEntity:entity insertIntoManagedObjectContext:[self.myDelegate managedObjectContext]];
-//        test.category = @"吃饭";
-//        test.date = [NSDate date];
-//        test.amount = [NSNumber numberWithInt:i];
-//        [self.myDelegate saveContext];
-//    }
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

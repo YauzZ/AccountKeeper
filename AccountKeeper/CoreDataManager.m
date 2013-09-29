@@ -64,6 +64,11 @@ static id sharedInstance = nil;
     }
 }
 
+- (NSEntityDescription *)getEntityWithName:(NSString *)name
+{
+    return [NSEntityDescription insertNewObjectForEntityForName:name inManagedObjectContext:_context];
+}
+
 - (NSMutableArray *)fetchDataWithEntity:(NSString *)entityName bySortDescriptors:(NSArray *)sortDescriptors
 {
     //创建取回数据请求

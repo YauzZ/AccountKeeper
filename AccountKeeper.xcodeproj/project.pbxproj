@@ -31,6 +31,7 @@
 		3BDEA70D17F591E200D15AFA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDEA70C17F591E200D15AFA /* FirstViewController.m */; };
 		3BEDF58317F811EF00EB1346 /* IncomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEDF58217F811EF00EB1346 /* IncomeViewController.m */; };
 		3BEDF58617F8123700EB1346 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEDF58517F8123700EB1346 /* CoreDataManager.m */; };
+		3BEDF58917F8224B00EB1346 /* AddIncomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEDF58817F8224B00EB1346 /* AddIncomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		3BEDF58217F811EF00EB1346 /* IncomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IncomeViewController.m; path = controller/IncomeViewController.m; sourceTree = "<group>"; };
 		3BEDF58417F8123700EB1346 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		3BEDF58517F8123700EB1346 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		3BEDF58717F8224B00EB1346 /* AddIncomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddIncomeViewController.h; path = controller/AddIncomeViewController.h; sourceTree = "<group>"; };
+		3BEDF58817F8224B00EB1346 /* AddIncomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddIncomeViewController.m; path = controller/AddIncomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 				3BDEA70C17F591E200D15AFA /* FirstViewController.m */,
 				3BEDF58117F811EF00EB1346 /* IncomeViewController.h */,
 				3BEDF58217F811EF00EB1346 /* IncomeViewController.m */,
+				3BEDF58717F8224B00EB1346 /* AddIncomeViewController.h */,
+				3BEDF58817F8224B00EB1346 /* AddIncomeViewController.m */,
 				3BEDF58017F811D200EB1346 /* Expenditure */,
 				3BDEA70817F58F1300D15AFA /* model */,
 				3BDEA6BD17F588C100D15AFA /* Supporting Files */,
@@ -319,6 +324,7 @@
 				3BDEA6EB17F589B400D15AFA /* AccountKeeper.xcdatamodeld in Sources */,
 				3BDEA70417F58EE800D15AFA /* Accounts.m in Sources */,
 				3BEDF58317F811EF00EB1346 /* IncomeViewController.m in Sources */,
+				3BEDF58917F8224B00EB1346 /* AddIncomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
