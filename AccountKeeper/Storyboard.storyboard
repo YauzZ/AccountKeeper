@@ -8,7 +8,7 @@
         <!--Navigation Controller-->
         <scene sceneID="EKs-ga-4Rh">
             <objects>
-                <navigationController definesPresentationContext="YES" id="PNq-OU-87U" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" toolbarHidden="NO" id="PNq-OU-87U" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="PBj-Mu-mAd">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -96,6 +96,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hPF-Vy-8XK" appends="YES" id="DBJ-7p-qMX"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="taW-fK-DBd">
                                 <rect key="frame" x="0.0" y="100" width="160" height="50"/>
@@ -145,23 +148,16 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PYQ-Qq-qa4">
-                                <rect key="frame" x="0.0" y="460" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="帮助" id="tIH-sN-OIw">
-                                        <connections>
-                                            <segue destination="AB6-ou-JRG" kind="push" id="9l6-3A-gTU"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wh7-3h-tld"/>
-                                    <barButtonItem title="设置" id="qa3-Qf-RFA"/>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <toolbarItems/>
+                    <toolbarItems>
+                        <barButtonItem title="帮助" id="CSu-Fl-BZh">
+                            <connections>
+                                <segue destination="AB6-ou-JRG" kind="push" id="Ysx-D0-oPs"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="HomeBudget" id="ozV-0a-Udm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Zk-if-Z11" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -170,8 +166,51 @@
                         <segue destination="bMU-nw-Ytn" kind="push" id="Kwo-nK-Y71"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="hPF-Vy-8XK">
+                    <connections>
+                        <segue destination="LXq-AY-t9x" kind="push" id="hVo-ef-0Ku"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-24" y="-617"/>
+        </scene>
+        <!--Table View Controller - 收入明细表-->
+        <scene sceneID="0br-gy-TvM">
+            <objects>
+                <tableViewController id="LXq-AY-t9x" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ykb-rN-rEy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ido-4f-oKo">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ido-4f-oKo" id="7JA-Kf-bze">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LXq-AY-t9x" id="XdW-OY-0Mj"/>
+                            <outlet property="delegate" destination="LXq-AY-t9x" id="HMl-fI-8xP"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="R" id="Iov-In-SdK"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="8K6-iF-5nq"/>
+                        <barButtonItem title="设置" id="00Y-Ke-8ks"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="收入明细表" id="EEH-kN-qDW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="e4O-ec-yZZ"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oWP-Vj-0zp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="595" y="-1387"/>
         </scene>
         <!--Expenditure View Controller-->
         <scene sceneID="24C-gs-pA8">
