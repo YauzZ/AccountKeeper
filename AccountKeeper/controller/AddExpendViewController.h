@@ -1,5 +1,5 @@
 //
-//  ExpenditureViewController.h
+//  AddExpendViewController.h
 //  AccountKeeper
 //
 //  Created by Colin Yang Hong on 13-9-29.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ExpenditureViewController : UIViewController
+@interface AddExpendViewController : UIViewController
 
 @end

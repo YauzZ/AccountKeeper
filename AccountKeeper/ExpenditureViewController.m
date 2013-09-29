@@ -12,6 +12,7 @@
 
 @interface ExpenditureViewController ()
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong) AppDelegate *myDelegate;
 @property (strong) NSMutableArray *objects;
 
@@ -19,19 +20,13 @@
 
 @implementation ExpenditureViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.myDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+
     
 // 测试数据
 //    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Expenditure" inManagedObjectContext:[self.myDelegate managedObjectContext]];
@@ -50,6 +45,11 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)addExpend
+{
+    
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -59,7 +59,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [self updateData];
-    [self.tableView reloadData];
+    [_tableView reloadData];
 }
 
 // 查询操作
