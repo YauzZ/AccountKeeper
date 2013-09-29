@@ -20,7 +20,4 @@
 @property (nonatomic, retain) NSString * annotations;
 @property (nonatomic, retain) Accounts *fromAccount;
 
-+ (void)saveExpend:(id)entry inManagedObjectContext:(NSManagedObjectContext *)context;
-+ (void)deleteExpend:(id)entry inManagedObjectContext:(NSManagedObjectContext *)context;
-
 @end

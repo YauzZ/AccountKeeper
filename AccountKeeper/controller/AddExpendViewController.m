@@ -7,6 +7,7 @@
 //
 
 #import "AddExpendViewController.h"
+#import "CoreDataManager.h"
 #import "AppDelegate.h"
 
 @interface AddExpendViewController ()
@@ -61,15 +62,17 @@
 
 - (IBAction)save:(id)sender
 {
+    CoreDataManager *cdManager = [CoreDataManager defaultInstance];
+    
     if (_expend == nil) {
-        self.expend = (Expenditure *)[NSEntityDescription insertNewObjectForEntityForName:@"Expenditure" inManagedObjectContext:_myDelegate.managedObjectContext];
+        self.expend = (Expenditure *)[cdManager getEntityWithName:@"Expenditure"];
     }
     
     _expend.amount = [NSNumber numberWithDouble:[_amount.text doubleValue]];
     _expend.category = _category.text;
     _expend.date = _currentDate.date;
     
-    [Expenditure saveExpend:_expend inManagedObjectContext:self.myDelegate.managedObjectContext];
+    [cdManager saveEntity:_expend];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

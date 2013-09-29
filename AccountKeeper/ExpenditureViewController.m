@@ -7,7 +7,7 @@
 //
 
 #import "ExpenditureViewController.h"
-#import "AppDelegate.h"
+#import "CoreDataManager.h"
 #import "Expenditure.h"
 #import "AddExpendViewController.h"
 
@@ -51,41 +51,9 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self updateData];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
+    self.objects = [[CoreDataManager defaultInstance] fetchDataWithEntity:@"Expenditure" bySortDescriptors:@[sortDescriptor]];
     [_tableView reloadData];
-}
-
-// 查询操作
-- (void)updateData
-{
-    //创建取回数据请求
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    
-    //设置要检索哪种类型的实体对象 (Student)
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Expenditure" inManagedObjectContext:self.myDelegate.managedObjectContext];
-    
-    //设置请求实体
-    [request setEntity:entity];
-    
-    //指定对结果的排序方式 (对data字段进行排序)
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date"ascending:NO];
-    NSArray *sortDescriptions = [[NSArray alloc]initWithObjects:sortDescriptor, nil];
-    [request setSortDescriptors:sortDescriptions];
-    
-    NSError *error = nil;
-    //执行获取数据请求，返回数组
-    NSMutableArray *mutableFetchResult = [[self.myDelegate.managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
-    if (mutableFetchResult == nil) {
-        NSLog(@"Error: %@,%@",error,[error userInfo]);
-    }
-    self.objects = mutableFetchResult;
-    
-    NSLog(@"The count of entry:%i",[self.objects count]);
-    
-    // 遍历所有取得的数据
-    for (Expenditure *expend in self.objects) {
-        NSLog(@"%@",expend);
-    }
 }
 
 #pragma mark - Table view data source
@@ -134,7 +102,8 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        [Expenditure deleteExpend:[_objects objectAtIndex:indexPath.row]  inManagedObjectContext:_myDelegate.managedObjectContext];
+        CoreDataManager *cdManager = [CoreDataManager defaultInstance];
+        [cdManager deleteEntity:[_objects objectAtIndex:indexPath.row]];
         [_objects removeObjectAtIndex:[indexPath row]];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
